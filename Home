@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry's Painting FL: Professional House Painters in Davenport & Orlando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <meta name="description" content="Professional house painters offering interior and exterior painting in Davenport and Orlando. Free, detailed in-home estimates from top-rated contractors.">
+    <meta name="keywords" content="professional house painters, interior and exterior painting services, meticulous prep work, free detailed in-home estimate, high-quality durable finish, top-rated painting services, professional painting contractors, free quotes from local painters, licensed and insured painters, customer-reviewed painters, experienced exterior painters, full-service painting, residential and commercial painting, expert paint application, free estimates, top-rated local painters, expert interior and exterior painting, affordable painting services">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Marcellus', serif;
+            color: #13285b;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background-image: url('https://static.wixstatic.com/media/12d78b_adfc19f30a094bf38c3422eddcd77e6c~mv2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1, .hero h2, .hero p {
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 70px 15px;
+            }
+        }
+
+        .service-highlights {
+            background-color: #f8f8f8; /* Subtle gray background */
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .service-highlights h2 {
+            font-size: 36px; /* Larger for impact */
+            color: #13285b;
+            margin-bottom: 30px;
+        }
+
+        .service-highlights .service {
+            display: inline-block;
+            width: 30%; 
+            margin: 0 1.5%;
+            text-align: center; /* Center align content within service box */
+            background-color: #fff; /* White background for contrast */
+            padding: 25px; 
+            border-radius: 12px;    
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-highlights .service:hover {
+            transform: translateY(-5px); 
+        }
+
+        .service-highlights .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.4s ease-out; 
+        }
+
+        .service-highlights .service:hover img {
+            transform: scale(1.1); /* Zoom slightly on hover */
+        }
+
+        .service-highlights .service h3 {
+            font-size: 22px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .service-highlights .service p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Media query for responsive layout - adjusted to 1024px for larger screens */
+        @media (max-width: 1024px) {
+            .service-highlights .service {
+                width: 48%; /* Two services per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-highlights .service {
+                width: 100%; 
+                margin-bottom: 20px; 
+            }
+        }
+
+        .featured-projects {
+            background-color: #f8f8f8;
+            padding: 50px 20px;
+        }
+
+        .featured-projects .section-title {
+            font-size: 36px;
+            color: #13285b;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .featured-projects .project {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 30%;
+            margin: 0 1.5%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-projects .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.4s ease-out;
+        }
+
+        .featured-projects .project:hover img {
+            transform: scale(1.1);
+        }
+
+        .featured-projects .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .featured-projects .project:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .featured-projects .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .featured-projects .project p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .customer-testimonials {
+            background-color: #ffffff;
+            padding: 50px 20px;
+        }
+
+        .customer-testimonials .section-title {
+            font-size: 36px;
+            color: #13285b;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .customer-testimonials .testimonial {
+            display: inline-block;
+            width: 30%;
+            margin: 0 1.5%;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .customer-testimonials .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .customer-testimonials .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .customer-testimonials .testimonial h3 {
+            font-size: 22px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .customer-testimonials .testimonial .rating {
+            color: #f0ad4e;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .customer-testimonials .testimonial p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .customer-testimonials .testimonial p::before,
+        .customer-testimonials .testimonial p::after {
+            content: open-quote;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        .customer-testimonials .testimonial p::after {
+            content: close-quote;
+        }
+
+        .call-to-action {
+            background-color: #13285b; /* Deep blue for trust and authority */
+            color: #fff;
+            padding: 60px 20px; /* Increased padding for more breathing space */
+            text-align: center;
+            position: relative; /* For background image */
+            overflow: hidden;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -20%; /* Adjust position for visual effect */
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: linear-gradient(45deg, #ff5722, #ff9800); /* Vibrant orange gradient */
+            transform: rotate(-15deg); /* Slight rotation for dynamism */
+            z-index: -1;
+        }
+
+        .call-to-action h2 {
+            font-size: 42px; /* Larger and bolder */
+            font-weight: 600; /* Slightly more weight */
+            margin-bottom: 25px;
+        }
+
+        .call-to-action p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px; /* More space before the button */
+        }
+
+        .call-to-action .cta-button {
+            background-color: #fff;
+            color: #13285b;
+            padding: 18px 40px; /* Even larger button */
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative; /* For ripple effect */
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cta-button:active::after { /* Ripple effect on click */
+            content: '';
+            background: rgba(255,255,255,0.2);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: ripple 1s ease;
+        }
+
+        @keyframes ripple {
+            100% {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+            }
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .call-to-action {
+                padding: 40px 15px;
+            }
+
+            .call-to-action h2 {
+                font-size: 34px;
+            }
+
+            .call-to-action p {
+                font-size: 18px;
+            }
+        }
+
+        /* Pop-up Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero" role="banner">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1>Top-Rated Painting Services in Davenport & Orlando</h1>
+            <h2>Professional House Painters for Your Home and Business</h2>
+            <p>Expert Interior and Exterior Painting Services with Meticulous Prep Work and High-Quality, Durable Finishes.</p>
+            <p>Get Your Free, Detailed In-Home Estimate Today!</p>
+        </div>
+    </header>
+
+    <!-- Our Expertise Section -->
+    <div class="service-highlights">
+        <h2>Our Expertise</h2>
+        <div class="service">
+            <img src="https://static.wixstatic.com/media/12d78b_a5ef5e9ecfaa4f71ae478a201aa8b881~mv2.png" alt="Residential Painting" loading="lazy">
+            <h3>Residential Painting</h3>
+            <p>Transform your home with vibrant colors and lasting finishes. We offer expert interior and exterior painting, meticulously tailored to your preferences.</p>
+        </div>
+        <div class="service">
+            <img src="https://static.wixstatic.com/media/12d78b_1c58f4c7a2a14356ab425e021739081d~mv2.jpg" alt="Commercial Painting" loading="lazy">
+            <h3>Commercial Painting</h3>
+            <p>Elevate your business with professional painting services. We understand the unique needs of commercial spaces and deliver exceptional results that impress.</p>
+        </div>
+        <div class="service">
+            <img src="https://static.wixstatic.com/media/12d78b_0aa57ca6480a44b4b1291c9f5ae1dbed~mv2.jpg" alt="Interior Painting" loading="lazy">
+            <h3>Interior Painting</h3>
+            <p>Revitalize your living spaces with fresh colors and impeccable craftsmanship. Our interior painting experts bring your vision to life with precision and care.</p>
+        </div>
+    </div>
+
+    <!-- Featured Projects Section -->
+    <div class="featured-projects">
+        <h2 class="section-title">Our Recent Work</h2>
+        <div class="project">
+            <img src="https://static.wixstatic.com/media/50833f_a033991f2b0b48409a7e3d53cb5f9be2~mv2.webp" alt="Residential Exterior" loading="lazy">
+            <div class="project-overlay">
+                <h3>Residential Exterior</h3>
+                <p>Complete exterior painting and restoration, enhancing the curb appeal of your home.</p>
+            </div> 
+        </div>
+        <div class="project">
+            <img src="https://static.wixstatic.com/media/50833f_8b88997dc7494e0b984697a34e7d8561~mv2.webp" alt="Commercial Office" loading="lazy">
+            <div class="project-overlay">
+                <h3>Commercial Office</h3>
+                <p>Revitalizing a workspace with modern interior painting, creating a productive atmosphere.</p>
+            </div> 
+        </div>
+        <div class="project">
+            <img src="https://static.wixstatic.com/media/50833f_53ac7b74950c46e382a89bb6a954b4a1~mv2.webp" alt="Historic Home" loading="lazy">
+            <div class="project-overlay">
+                <h3>Historic Home</h3>
+                <p>Meticulous painting and preservation of a historic property, preserving its unique character.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Testimonials Section -->
+    <div class="customer-testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/100" alt="Client 1">
+            <h3>John Doe</h3>
+            <div class="rating">★★★★★</div> 
+            <p>"Henry's Painting did an amazing job on our home's exterior. The team was professional, efficient, and the results exceeded our expectations. Highly recommend!"</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/100" alt="Client 2">
+            <h3>Jane Smith</h3>
+            <div class="rating">★★★★★</div> 
+            <p>"We hired Henry's Painting for our office space, and they delivered outstanding results. They worked quickly, minimizing disruption to our business, and the final look is modern and inviting."</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/100" alt="Client 3">
+            <h3>Emily Johnson</h3>
+            <div class="rating">★★★★★</div> 
+            <p>"Henry's Painting transformed our historic home with their meticulous attention to detail and expert knowledge of restoration techniques. We couldn't be happier with their work!"</p>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="call-to-action">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Contact Henry's Painting & Contracting today for a free, no-obligation consultation. Let us bring your vision to life!</p>
+        <button id="contact-btn" class="cta-button">Request a Free Quote</button>
+    </div>
+
+    <!-- Pop-up Form -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Form</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger the Pop-up
+            const contactBtn = document.getElementById('contact-btn');
+            const popup = document.getElementById('popup');
+            const closeBtn = document.querySelector('.close-btn');
+
+            contactBtn.addEventListener('click', () => {
+                popup.style.display = 'flex';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+
+            // Handle form submission
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Collect form data
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                // Send form data using Velo by Wix (Example API call)
+                try {
+                    const response = await fetch('https://your-api-endpoint', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        alert('Form submitted successfully!');
+                        form.reset();
+                        popup.style.display = 'none';
+                    } else {
+                        alert('Failed to submit the form. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
